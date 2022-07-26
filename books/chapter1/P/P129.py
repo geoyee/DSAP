@@ -6,9 +6,21 @@ import typing
 
 
 def randmerge(strs: typing.Sequence[str]) -> typing.List[str]:
-    pass
+    def words(
+        letters: typing.Set[str], word: str = "", results: typing.List = []
+    ) -> None:
+        if not letters:
+            results.append(word)
+        for letter in letters:
+            words(letters - {letter}, word + letter, results)
+
+    results: typing.List[str] = []
+    words(set(strs), results=results)
+    return results
 
 
 if __name__ == "__main__":
     strs = ["c", "a", "t", "d", "o", "g"]
-    print(randmerge(strs))
+    res = randmerge(strs)
+    print(len(res))
+    print(res)
