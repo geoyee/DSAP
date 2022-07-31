@@ -1,5 +1,6 @@
 """
-编写Python程序，将以下句子“I will never spam my friends agian.”写100次。程序应该对每个句子进行计数，另外，应有8次不同的随机输入错误。
+编写Python程序，将以下句子“I will never spam my friends agian.”写100次。程序应该对每个句子进行计数。
+另外，应有8次不同的随机输入错误。
 """
 
 import random
