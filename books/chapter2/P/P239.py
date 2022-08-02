@@ -131,7 +131,7 @@ class EquilateralTriangle(IsoscelesTriangle):
     NAME = "EquilateralTriangle"
 
     def __init__(self, points: typing.List[typing.Tuple[Number, Number]]) -> None:
-        if self.check(points, 3):
+        if self.check(points, 1):
             super().__init__(points)
         else:
             raise ValueError("This is not an equilateral triangle.")
